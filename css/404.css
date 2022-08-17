@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/*---ПОДКЛЮЧЕНИЕ-ОБНУЛЯЮЩЕГО-СТИЛЯ--------------*/
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+/*--------------------*/
+/*---ПОДКЛЮЧЕНИЕ-ШРИФТОВ------------------------*/
+/*---ИСПОЛЬЗУЕМЫЕ-ЦВЕТА-------------------------*/
+/*---ОСНОВНОЕ-----------------------------------*/
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: #e9e9e9; }
+
+/*---404----------------------------------------*/
+.page {
+  text-align: center;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 15px; }
+
+.page__container {
+  border: 1px solid #10c9c3;
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 10px 5px #10c9c3;
+  box-shadow: 0px 0px 10px 5px #10c9c3;
+  background-color: #f8f9f9;
+  padding: 0 15px; }
+
+h1 {
+  color: #10c9c3;
+  font-size: 120px;
+  margin-bottom: 30px;
+  font-weight: 800;
+  letter-spacing: 0.5px; }
+
+p {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 150%;
+  letter-spacing: 0.5px; }
+
+.text {
+  font-weight: 800;
+  text-transform: uppercase; }
+
+.info {
+  color: #191919; }
+
+button.button {
+  background-color: #10c9c3;
+  border: 1px solid #10c9c3;
+  color: #fff;
+  padding: 22px 44px;
+  border-radius: 5px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 2;
+  overflow: hidden; }
+  button.button::before, button.button::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #f8f9f9;
+    opacity: 0.5;
+    top: 0;
+    left: -100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    z-index: -1; }
+  button.button::after {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease 0.1s;
+    -o-transition: all 0.3s ease 0.1s;
+    transition: all 0.3s ease 0.1s; }
+  button.button:hover {
+    color: #10c9c3; }
+    button.button:hover::before, button.button:hover::after {
+      left: 0; }
+
+@media (max-width: 1000px) {
+  .page__container {
+    width: 600px;
+    height: 600px; } }
+
+@media (max-width: 767px) {
+  .page__container {
+    width: 400px;
+    height: 600px; } }
+
+@media (max-width: 540px) {
+  .page__container {
+    width: 300px;
+    height: 550px; } }
+
+@media (max-width: 400px) {
+  .page__container {
+    width: 260px;
+    height: 550px; } }
